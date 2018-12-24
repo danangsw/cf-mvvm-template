@@ -5,6 +5,11 @@ With this project template, based on Windows Forms MVVM pattern (like Silverligh
 
 On this template you will create your Models, ViewModels and Views with item templates and made easy to maintain application. Use Binding to link your ViewModel and Control, use ValidatorAttribut to validate your models.
 
+## System Requirements
+1. .Net Compact Framework 3.5 Service Pack 1
+2. Windows Mobile 5.0 or later
+3. Microsoft Visual Studio 2008
+
 ## More Information
 1. [MVVM (Model-View-ViewModel) Pattern For Windows Form Applications, using C#.](https://www.codeproject.com/Articles/364485/MVVM-Model-View-ViewModel-Patte)
 2. [Implementing the MVVM Pattern Using the Prism Library 5.0 for WPF](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/gg405484(v%3dpandp.40))

@@ -34,6 +34,7 @@
     <NoStdLib>true</NoStdLib>
     <NoConfig>true</NoConfig>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -49,7 +50,37 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ItemGroup>
+    <Reference Include="DNWA.BHT1200CL, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2b8c09c065872236, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParties\DNWA.BHT1200CL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windowsce.Forms" />
     <Reference Include="mscorlib" />
+    <Reference Include="NETStandard.WindowsCE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=961e8a38a128a442, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParties\netstandard.windowsce.1.4.0\net35-cf\NETStandard.WindowsCE.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=2.1.0.76, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParties\ninject.2.1.0.76\lib\35CF\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParties\nunitcf.3.5.0\net35-cf\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security.Cryptography.PBKDF2.CF35, Version=1.1.4759.22039, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParties\System.Security.Cryptography.PBKDF2.CF35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>
@@ -65,4 +96,77 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Compile Include="Mvvm\BaseCommand.cs" />
+    <Compile Include="Mvvm\Binding.cs" />
+    <Compile Include="Mvvm\BindingBuilder.cs" />
+    <Compile Include="Mvvm\BindingConfiguration.cs" />
+    <Compile Include="Mvvm\BindingFactory.cs" />
+    <Compile Include="Mvvm\BindingManager.cs" />
+    <Compile Include="Mvvm\Bindings\ButtonCommandBinding.cs" />
+    <Compile Include="Mvvm\Bindings\CheckBoxBinding.cs" />
+    <Compile Include="Mvvm\Bindings\ComboBoxBinding.cs" />
+    <Compile Include="Mvvm\Bindings\CommandBinding.cs" />
+    <Compile Include="Mvvm\Bindings\DataGridBinding.cs" />
+    <Compile Include="Mvvm\Bindings\DateTimePickerBinding.cs" />
+    <Compile Include="Mvvm\Bindings\MenuItemCommandBinding.cs" />
+    <Compile Include="Mvvm\Bindings\RadioBinding.cs" />
+    <Compile Include="Mvvm\Bindings\SimpleBinding.cs" />
+    <Compile Include="Mvvm\Bindings\TextBoxBinding.cs" />
+    <Compile Include="Mvvm\CommandBindingBuilder.cs" />
+    <Compile Include="Mvvm\Exceptions\InvalidBindingException.cs" />
+    <Compile Include="Mvvm\Extensions.cs" />
+    <Compile Include="Mvvm\ICommand.cs" />
+    <Compile Include="Mvvm\MvvmApplication.cs" />
+    <Compile Include="Mvvm\MvvmModule.cs" />
+    <Compile Include="Mvvm\MvvmNavigator.cs" />
+    <Compile Include="Mvvm\NotifyEventArgs.cs" />
+    <Compile Include="Mvvm\TwoWayBinding.cs" />
+    <Compile Include="Mvvm\UserControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mvvm\UserControlBase.designer.cs">
+      <DependentUpon>UserControlBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\ViewBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mvvm\ViewBase.designer.cs">
+      <DependentUpon>ViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\ViewModelBase.cs" />
+    <Compile Include="Mvvm\ViewModelConfiguration.cs" />
+    <Compile Include="Utility\DapperLite\Database.cs" />
+    <Compile Include="Utility\DapperLite\SqlCeDatabase.cs" />
+    <Compile Include="Utility\DapperLite\SqlMapper.cs" />
+    <Compile Include="Utility\DapperLite\SqlMapperInsertUpdate.cs" />
+    <Compile Include="Utility\Forms\AnimateCtl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utility\Forms\AutoClosingMessageBox.cs" />
+    <Compile Include="Utility\Forms\Capturer.cs" />
+    <Compile Include="Utility\Forms\CeHotKeys.cs" />
+    <Compile Include="Utility\Forms\DataGridFormatCellEventArgs.cs" />
+    <Compile Include="Utility\Services\DateAndTime.cs" />
+    <Compile Include="Utility\Services\Device.cs" />
+    <Compile Include="Utility\Forms\FormattableDecimalTextBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utility\Forms\FormattableTextBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utility\Forms\FormUtility.cs" />
+    <Compile Include="Utility\Forms\GridServices.cs" />
+    <Compile Include="Utility\Services\Helpers.cs" />
+    <Compile Include="Utility\Services\MultiLanguageManager.cs" />
+    <Compile Include="Utility\Services\PropertyCopier.cs" />
+    <Compile Include="Utility\Services\ResponseResult.cs" />
+    <Compile Include="Utility\Services\SingleInstanceApplication.cs" />
+    <Compile Include="Utility\Services\ThreadManager.cs" />
+    <Compile Include="Utility\BHT\BHTController.cs" />
+    <Compile Include="Utility\Forms\MessageUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mvvm\Helpers\" />
+  </ItemGroup>
 </Project>

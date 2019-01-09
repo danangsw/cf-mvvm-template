@@ -14,3 +14,5 @@ On this template you will create your Models, ViewModels and Views with item tem
 1. [MVVM (Model-View-ViewModel) Pattern For Windows Form Applications, using C#.](https://www.codeproject.com/Articles/364485/MVVM-Model-View-ViewModel-Patte)
 2. [Implementing the MVVM Pattern Using the Prism Library 5.0 for WPF](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/gg405484(v%3dpandp.40))
 3. [Advanced MVVM Scenarios Using the Prism Library 5.0 for WPF](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/gg405494(v%3dpandp.40))
+4. [Software Development Kit (SDK) for Denso BHT Windows ® CE](https://www.denso-wave.com/en/adcd/download/category/sampleprogram/bht_win/)
+5. [DENSO BHT-1200 series specification](http://static6.arrow.com/aropdfconversion/32c62d5e88ffd8b0cd41158c632c4a0a85233e0a/attachmentfilenameutf-8bht-1200_e2.pdf)

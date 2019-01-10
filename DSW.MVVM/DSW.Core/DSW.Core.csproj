@@ -97,6 +97,8 @@
   </Target>
   -->
   <ItemGroup>
+    <Compile Include="Extensions\DateTimeExtension.cs" />
+    <Compile Include="Extensions\DecimalExtension.cs" />
     <Compile Include="Mvvm\BaseCommand.cs" />
     <Compile Include="Mvvm\Binding.cs" />
     <Compile Include="Mvvm\BindingBuilder.cs" />
@@ -158,6 +160,7 @@
     <Compile Include="Utility\Forms\FormUtility.cs" />
     <Compile Include="Utility\Forms\GridServices.cs" />
     <Compile Include="Utility\Services\Helpers.cs" />
+    <Compile Include="Utility\Services\LogFormat.cs" />
     <Compile Include="Utility\Services\MultiLanguageManager.cs" />
     <Compile Include="Utility\Services\PropertyCopier.cs" />
     <Compile Include="Utility\Services\ResponseResult.cs" />

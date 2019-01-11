@@ -5,7 +5,7 @@
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B7B13CA1-0783-48E2-8FAC-B5270DF39256}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DSW.HT</RootNamespace>
     <AssemblyName>DSW.HT</AssemblyName>
@@ -47,6 +47,10 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Log4NetCF, Version=2.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParties\log4netTaufikCF\Log4NetCF.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="Ninject, Version=2.1.0.76, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -63,17 +67,57 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap.cs" />
+    <Compile Include="Commands\Stocktake\StocktakeDetailCommand.cs" />
+    <Compile Include="Commands\Stocktake\StocktakeItemCommand.cs" />
+    <Compile Include="Commands\Stocktake\StocktakeNewCommand.cs" />
+    <Compile Include="Messages\Stocktake\StocktakeDetailMessage.cs" />
+    <Compile Include="Messages\Stocktake\StocktakeItemMessage.cs" />
+    <Compile Include="Messages\Stocktake\StocktakeNewMessage.cs" />
+    <Compile Include="Models\Stocktake\StocktakeDetailModel.cs" />
+    <Compile Include="Models\Stocktake\StocktakeItemModel.cs" />
+    <Compile Include="Models\Stocktake\StocktakeNewModel.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Stocktake\SocktakeDetailView.resx">
+      <DependentUpon>SocktakeDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Stocktake\StocktakeItemView.resx">
+      <DependentUpon>StocktakeItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Stocktake\StocktakeNewView.resx">
+      <DependentUpon>StocktakeNewView.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Setting.cs" />
+    <Compile Include="ViewModels\Stocktake\StocktakeDetailViewModel.cs" />
+    <Compile Include="ViewModels\Stocktake\StocktakeItemViewModel.cs" />
+    <Compile Include="ViewModels\Stocktake\StocktakeNewViewModel.cs" />
+    <Compile Include="Views\Stocktake\SocktakeDetailView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Stocktake\SocktakeDetailView.Designer.cs">
+      <DependentUpon>SocktakeDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Stocktake\StocktakeItemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Stocktake\StocktakeItemView.Designer.cs">
+      <DependentUpon>StocktakeItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Stocktake\StocktakeNewView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Stocktake\StocktakeNewView.Designer.cs">
+      <DependentUpon>StocktakeNewView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config.xml" />
@@ -83,11 +127,10 @@
     <None Include="DSW.HT.exe.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="Messages\" />
-    <Folder Include="Models\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
+    <ProjectReference Include="..\DSW.Core\DSW.Core.csproj">
+      <Project>{ADA9B764-BF7A-4FB0-92E6-43E59227AB88}</Project>
+      <Name>DSW.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>

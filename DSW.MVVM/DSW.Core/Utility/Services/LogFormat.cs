@@ -20,4 +20,10 @@ namespace DSW.Core.Utility.Services
             return Info;
         }
     }
+
+    public static class LogStatus
+    {
+        public const string Success = "Success";
+        public const string Failed = "Failed";
+    }
 }

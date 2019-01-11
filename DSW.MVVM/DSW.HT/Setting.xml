@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="ApiAddress" value="10.192.81.155:8282" />
+  </appSettings>
+</configuration>

@@ -9,6 +9,7 @@ On this template you will create your Models, ViewModels and Views with item tem
 1. .Net Compact Framework 3.5 Service Pack 1
 2. Windows Mobile 5.0 or later
 3. Microsoft Visual Studio 2008
+4. DENSO BHT-1200 series
 
 ## More Information
 1. [MVVM (Model-View-ViewModel) Pattern For Windows Form Applications, using C#.](https://www.codeproject.com/Articles/364485/MVVM-Model-View-ViewModel-Patte)

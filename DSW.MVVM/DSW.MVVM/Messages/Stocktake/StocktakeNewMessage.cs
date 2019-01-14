@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DSW.HT.Messages.Stocktake
+namespace DSW.MVVM.Messages.Stocktake
 {
     public class StocktakeNewMessage
     {

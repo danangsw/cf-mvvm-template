@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DSW.HT.Commands.Stocktake
+namespace DSW.MVVM.Commands.Stocktake
 {
     public class StocktakeNewCommand
     {

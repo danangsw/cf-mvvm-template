@@ -3,9 +3,9 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DSW.HT.Commands.Stocktake
+namespace DSW.MVVM.Messages.Stocktake
 {
-    public class StocktakeDetailCommand
+    public class StocktakeItemMessage
     {
     }
 }

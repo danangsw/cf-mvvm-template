@@ -3,9 +3,9 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DSW.HT.Models.Stocktake
+namespace DSW.MVVM.ViewModels.Stocktake
 {
-    public class StocktakeItemModel
+    public class StocktakeItemViewModel
     {
     }
 }

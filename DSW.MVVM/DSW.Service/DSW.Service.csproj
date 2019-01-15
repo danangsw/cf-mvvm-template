@@ -63,6 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiClient\ApiClientService.cs" />
+    <Compile Include="Business\AppSettingService.cs" />
+    <Compile Include="Business\MstItemService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -78,9 +80,6 @@
       <Project>{3BB267C0-E1EE-4FAB-B66F-34C3A746D46F}</Project>
       <Name>DSW.Localisation</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>

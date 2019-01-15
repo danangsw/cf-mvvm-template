@@ -14,6 +14,8 @@ namespace DSW.HT.Views.Stocktake
         public StocktakeNewView()
         {
             InitializeComponent();
+
+            this.Menu = null;
         }
     }
 }

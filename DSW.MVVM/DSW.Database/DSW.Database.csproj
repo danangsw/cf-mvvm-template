@@ -45,16 +45,46 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ErikEJ.SqlCe.NetCF, Version=2.1.6.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParties\SqlCeBulkCopy.2.1.6.12\ErikEJ.SqlCe.NetCF.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
+    <Reference Include="NETStandard.WindowsCE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=961e8a38a128a442, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParties\netstandard.windowsce.1.4.0\net35-cf\NETStandard.WindowsCE.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=3.0.3600.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\AppSetting.cs" />
+    <Compile Include="Entity\MstItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AppSettingRepository.cs" />
+    <Compile Include="Repository\MstItemRepository.cs" />
+    <Compile Include="Repository\SqlCeBaseRepository.cs" />
+    <Compile Include="Repository\SqlCePredicates.cs" />
+    <Compile Include="UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppDatabase.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DSW.Core\DSW.Core.csproj">
+      <Project>{ADA9B764-BF7A-4FB0-92E6-43E59227AB88}</Project>
+      <Name>DSW.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>

@@ -138,6 +138,7 @@
     </Compile>
     <Compile Include="Mvvm\ViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModelConfiguration.cs" />
+    <Compile Include="Utility\BHT\BHTControllerOpt.cs" />
     <Compile Include="Utility\DapperLite\Database.cs" />
     <Compile Include="Utility\DapperLite\SqlCeDatabase.cs" />
     <Compile Include="Utility\DapperLite\SqlMapper.cs" />

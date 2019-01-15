@@ -10,14 +10,14 @@ namespace DSW.Core.Utility.BHT
     public class BHTController
     {
 
-        private Beep MyBeep;
-        private LED MyLed;
-        private LED.EN_COLOR activeLedColor;
-        private Scanner MyScanner;
-        private ScannerCodeType CodeType;
-        private ScannerReadMode Mode;
+        protected Beep MyBeep;
+        protected LED MyLed;
+        protected LED.EN_COLOR activeLedColor;
+        protected Scanner MyScanner;
+        protected ScannerCodeType CodeType;
+        protected ScannerReadMode Mode;
         public event EventHandler ScannerDoneHandler = delegate { };
-        private TextBox LabelScan;
+        protected TextBox LabelScan;
 
         public BHTController()
         {
@@ -34,7 +34,7 @@ namespace DSW.Core.Utility.BHT
             }
         }
 
-        private void MyScanner_OnDone(object sender, EventArgs e)
+        protected void MyScanner_OnDone(object sender, EventArgs e)
         {
             SoundConfirm();
             LabelScan.Text = string.Empty;

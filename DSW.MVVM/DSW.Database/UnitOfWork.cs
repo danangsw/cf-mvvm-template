@@ -5,12 +5,15 @@ using System.Text;
 using System.Data.SqlServerCe;
 using System.Data;
 using DSW.Core.Utility.DapperLite;
-
+using DSW.Database.Repository;
 
 namespace DSW.Database
 {
     public interface IUnitOfWork : IDisposable
     {
+        IAppSettingRepository AppSettingRepository { get; }
+        IMstItemRepository MstItemRepository { get; }
+
         SqlCeDatabase Database { get; }
         SqlCeConnection SqlConnection { get; }
         SqlCeTransaction BeginTransaction();
@@ -30,10 +33,16 @@ namespace DSW.Database
         public SqlCeConnection SqlConnection { get; private set; }
         public SqlCeTransaction Transaction { get; private set; }
 
+        public IAppSettingRepository AppSettingRepository { get; private set; }
+        public IMstItemRepository MstItemRepository { get; private set; }
+
         public UnitOfWork() {
             SqlConnection = new SqlCeConnection(sdfPath);
             Database = new SqlCeDatabase(SqlConnection);
             Database.Init();
+
+            AppSettingRepository = new AppSettingRepository(Database);
+            MstItemRepository = new MstItemRepository(Database);
         }
 
         public SqlCeTransaction BeginTransaction()

@@ -59,5 +59,41 @@ namespace DSW.Localisation.Labels {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sinkron.
+        /// </summary>
+        public static string HT_BTN_COM001 {
+            get {
+                return ResourceManager.GetString("HT_BTN_COM001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lanjut.
+        /// </summary>
+        public static string HT_BTN_STT001 {
+            get {
+                return ResourceManager.GetString("HT_BTN_STT001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pilih Lokasi.
+        /// </summary>
+        public static string HT_LBL_STT001 {
+            get {
+                return ResourceManager.GetString("HT_LBL_STT001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} Item.
+        /// </summary>
+        public static string HT_LBL_STT002 {
+            get {
+                return ResourceManager.GetString("HT_LBL_STT002", resourceCulture);
+            }
+        }
     }
 }

@@ -33,8 +33,8 @@ namespace DSW.Main
                     FormUtility.EnableTaskBar(false);
                     FormUtility.EnableTaskBar(true);
 
-                    MessageUtility.DisplayErrorMsg(DSW.Localisation.Messages.Dictionary.Common.HT_COM_MS029,
-                        DSW.Localisation.Messages.Dictionary.Common.HT_COM_CAP001);
+                    MessageUtility.DisplayErrorMsg(MultiLanguageManager.Messages.GetString(DSW.Localisation.Messages.Dictionary.Common.HT_COM_MS029),
+                        MultiLanguageManager.Messages.GetString(DSW.Localisation.Messages.Dictionary.Common.HT_COM_CAP001));
 
                     log.Info(LogFormat.Message("", "Application_end", LogStatus.Failed, DSW.Localisation.Messages.Dictionary.Common.HT_COM_MS029));
 
@@ -61,6 +61,12 @@ namespace DSW.Main
                 log.Info(LogFormat.Message("", "Application_end", LogStatus.Failed, ex.Message + Environment.NewLine + ex.StackTrace));
 
                 LogManager.Shutdown();
+
+                FormUtility.EnableTaskBar(false);
+                FormUtility.EnableTaskBar(true);
+
+                MessageUtility.DisplayErrorMsg(ex.Message,
+                    MultiLanguageManager.Messages.GetString(DSW.Localisation.Messages.Dictionary.Common.HT_COM_CAP001));
 
                 Application.Exit();
             }

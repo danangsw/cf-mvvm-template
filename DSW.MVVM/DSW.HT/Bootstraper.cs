@@ -6,6 +6,7 @@ using Ninject.Modules;
 using DSW.Database;
 using DSW.Service.ApiClient;
 using DSW.Service.Business;
+using DSW.MVVM.ViewModels.Stocktake;
 
 namespace DSW.HT
 {
@@ -17,6 +18,9 @@ namespace DSW.HT
             Bind<IAppSettingService>().To<AppSettingService>();
             Bind<IMstItemService>().To<MstItemService>();
             Bind<IUnitOfWork>().To<UnitOfWork>().InSingletonScope();
+            Bind<StocktakeNewViewModel>().ToSelf();
+            Bind<StocktakeItemViewModel>().ToSelf();
+            Bind<StocktakeDetailViewModel>().ToSelf();
         }
     }
 }

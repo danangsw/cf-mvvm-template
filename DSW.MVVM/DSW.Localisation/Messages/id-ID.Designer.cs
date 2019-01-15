@@ -59,5 +59,68 @@ namespace DSW.Localisation.Messages {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sukses.
+        /// </summary>
+        public static string HT_COM_CAP001 {
+            get {
+                return ResourceManager.GetString("HT_COM_CAP001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Galat.
+        /// </summary>
+        public static string HT_COM_CAP002 {
+            get {
+                return ResourceManager.GetString("HT_COM_CAP002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Peringatan.
+        /// </summary>
+        public static string HT_COM_CAP003 {
+            get {
+                return ResourceManager.GetString("HT_COM_CAP003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Konfirmasi.
+        /// </summary>
+        public static string HT_COM_CAP004 {
+            get {
+                return ResourceManager.GetString("HT_COM_CAP004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HT_COM_MS008: Jaringan tidak tersedia..
+        /// </summary>
+        public static string HT_COM_MS008 {
+            get {
+                return ResourceManager.GetString("HT_COM_MS008", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HT_COM_MS029: Aplikasi yang sama sedang berjalan.
+        /// </summary>
+        public static string HT_COM_MS029 {
+            get {
+                return ResourceManager.GetString("HT_COM_MS029", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HT_COM_MS040: Sepertinya server terlalu lama merespons, silakan coba lagi nanti.
+        /// </summary>
+        public static string HT_COM_MS040 {
+            get {
+                return ResourceManager.GetString("HT_COM_MS040", resourceCulture);
+            }
+        }
     }
 }

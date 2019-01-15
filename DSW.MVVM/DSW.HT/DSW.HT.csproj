@@ -123,6 +123,10 @@
       <Project>{C9508370-8B91-4B55-99AC-86267FFC8574}</Project>
       <Name>DSW.Database</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DSW.Localisation\DSW.Localisation.csproj">
+      <Project>{3BB267C0-E1EE-4FAB-B66F-34C3A746D46F}</Project>
+      <Name>DSW.Localisation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DSW.Service\DSW.Service.csproj">
       <Project>{1A7937AA-C044-4300-A6EF-B1262D59A234}</Project>
       <Name>DSW.Service</Name>

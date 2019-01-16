@@ -68,6 +68,8 @@
   <ItemGroup>
     <Compile Include="Entity\AppSetting.cs" />
     <Compile Include="Entity\MstItem.cs" />
+    <Compile Include="Entity\STItem.cs" />
+    <Compile Include="Entity\STLocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AppSettingRepository.cs" />
     <Compile Include="Repository\MstItemRepository.cs" />

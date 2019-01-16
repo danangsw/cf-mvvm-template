@@ -58,7 +58,7 @@
             // 
             // lblLocation
             // 
-            this.lblLocation.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular);
+            this.lblLocation.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.lblLocation.Location = new System.Drawing.Point(4, 82);
             this.lblLocation.Name = "lblLocation";
             this.lblLocation.Size = new System.Drawing.Size(311, 20);

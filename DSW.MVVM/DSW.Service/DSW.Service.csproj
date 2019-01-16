@@ -62,9 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiClient\ApiClientConstant.cs" />
     <Compile Include="ApiClient\ApiClientService.cs" />
     <Compile Include="Business\AppSettingService.cs" />
     <Compile Include="Business\MstItemService.cs" />
+    <Compile Include="Business\StocktakeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

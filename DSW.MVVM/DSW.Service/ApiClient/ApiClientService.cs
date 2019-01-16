@@ -27,7 +27,7 @@ namespace DSW.Service.ApiClient
         public T Get<T>(string IP, string route) where T : new()
         {
             var client = new RestClient(IP);
-            client.Timeout = ApiClientConstant.RestClient.Timeout;
+            client.Timeout = ApiClientConstant.Timeout;
             var requestGet = new RestRequest(route, Method.GET);
             IRestResponse<T> response = client.Execute<T>(requestGet);
             if (!response.IsSuccessful)
@@ -53,7 +53,7 @@ namespace DSW.Service.ApiClient
         public T Get<T>(string IP, string route, string id) where T : new()
         {
             var client = new RestClient(IP);
-            client.Timeout = ApiClientConstant.RestClient.Timeout;
+            client.Timeout = ApiClientConstant.Timeout;
             var requestGet = new RestRequest(route + id, Method.GET);
             IRestResponse<T> response = client.Execute<T>(requestGet);
             if (!response.IsSuccessful)
@@ -78,9 +78,9 @@ namespace DSW.Service.ApiClient
         public T Post<T>(string IP, string route, T data) where T : new()
         {
             var client = new RestClient(IP);
-            client.Timeout = ApiClientConstant.RestClient.Timeout;
+            client.Timeout = ApiClientConstant.Timeout;
             var requestPost = new RestRequest(route, Method.POST);
-            requestPost.AddHeader(ApiClientConstant.RestClient.ContentType, ApiClientConstant.RestClient.ApplicationJson);
+            requestPost.AddHeader(ApiClientConstant.HeaderKey.ContentType, ApiClientConstant.HeaderValue.ApplicationJson);
             requestPost.AddJsonBody(data);
             IRestResponse<T> response = client.Execute<T>(requestPost);
             if (!response.IsSuccessful)
@@ -104,9 +104,9 @@ namespace DSW.Service.ApiClient
         public T Put<T>(string IP, string route, T data) where T : new()
         {
             var client = new RestClient(IP);
-            client.Timeout = ApiClientConstant.RestClient.Timeout;
+            client.Timeout = ApiClientConstant.Timeout;
             var requestPut = new RestRequest(route, Method.PUT);
-            requestPut.AddHeader(ApiClientConstant.RestClient.ContentType, ApiClientConstant.RestClient.ApplicationJson);
+            requestPut.AddHeader(ApiClientConstant.HeaderKey.ContentType, ApiClientConstant.HeaderValue.ApplicationJson);
             requestPut.AddJsonBody(data);
             IRestResponse<T> response = client.Execute<T>(requestPut);
             if (!response.IsSuccessful)
@@ -131,9 +131,9 @@ namespace DSW.Service.ApiClient
             where R : new()
         {
             var client = new RestClient(IP);
-            client.Timeout = ApiClientConstant.RestClient.Timeout;
+            client.Timeout = ApiClientConstant.Timeout;
             var requestPost = new RestRequest(route, Method.POST);
-            requestPost.AddHeader(ApiClientConstant.RestClient.ContentType, ApiClientConstant.RestClient.ApplicationJson);
+            requestPost.AddHeader(ApiClientConstant.HeaderKey.ContentType, ApiClientConstant.HeaderValue.ApplicationJson);
             requestPost.AddJsonBody(data);
             IRestResponse<R> response = client.Execute<R>(requestPost);
             if (!response.IsSuccessful)

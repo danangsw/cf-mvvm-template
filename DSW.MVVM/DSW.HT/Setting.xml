@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <appSettings>
-    <add key="ApiAddress" value="10.192.81.155:8282" />
+    <add key="ApiAddress" value="303c6312-960f-455e-be3d-f86fd75f0048.mock.pstmn.io" />
   </appSettings>
 </configuration>

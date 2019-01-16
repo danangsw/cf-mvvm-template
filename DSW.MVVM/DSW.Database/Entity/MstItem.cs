@@ -9,6 +9,6 @@ namespace DSW.Database.Entity
     {
         public int Id { get; set; }
         public string ItemNo { get; set; }
-        public string Description { get; set; }
+        public string ItemDesc { get; set; }
     }
 }

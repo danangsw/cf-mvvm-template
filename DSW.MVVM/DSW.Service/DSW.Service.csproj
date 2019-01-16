@@ -64,15 +64,22 @@
   <ItemGroup>
     <Compile Include="ApiClient\ApiClientConstant.cs" />
     <Compile Include="ApiClient\ApiClientService.cs" />
+    <Compile Include="BusinessModels\InitialSetupModel.cs" />
     <Compile Include="Business\AppSettingService.cs" />
+    <Compile Include="Business\InitialSetupService.cs" />
     <Compile Include="Business\MstItemService.cs" />
     <Compile Include="Business\StocktakeService.cs" />
+    <Compile Include="ApiModels\InitialSetupApiModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DSW.Core\DSW.Core.csproj">
       <Project>{ADA9B764-BF7A-4FB0-92E6-43E59227AB88}</Project>
       <Name>DSW.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DSW.Database\DSW.Database.csproj">
+      <Project>{C9508370-8B91-4B55-99AC-86267FFC8574}</Project>
+      <Name>DSW.Database</Name>
     </ProjectReference>
     <ProjectReference Include="..\DSW.Library\DSW.Library.csproj">
       <Project>{C0D0253D-9AB0-4DF3-A05A-8F96B79BCC2C}</Project>

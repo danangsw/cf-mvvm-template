@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBConstant.cs" />
     <Compile Include="Entity\AppSetting.cs" />
     <Compile Include="Entity\MstItem.cs" />
     <Compile Include="Entity\STItem.cs" />

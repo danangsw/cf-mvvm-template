@@ -108,6 +108,10 @@
       <Project>{3BB267C0-E1EE-4FAB-B66F-34C3A746D46F}</Project>
       <Name>DSW.Localisation</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DSW.Service\DSW.Service.csproj">
+      <Project>{1A7937AA-C044-4300-A6EF-B1262D59A234}</Project>
+      <Name>DSW.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\Loading\LoadingView.resx">

@@ -7,7 +7,6 @@ using RestSharp;
 using System.Threading;
 using System.Resources;
 using DSW.Core.Utility.Services;
-using DSW.Library;
 
 namespace DSW.Service.ApiClient
 {

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using DSW.Core.MVVM;
 using DSW.MVVM.ViewModels.Stocktake;
 
-namespace DSW.HT.Views.Stocktake
+namespace DSW.MVVM.Views.Stocktake
 {
     public partial class StocktakeNewView : StocktakeNewViewBase
     {
@@ -17,9 +17,34 @@ namespace DSW.HT.Views.Stocktake
         {
             InitializeComponent();
 
-            this.Menu = null;
+            this.Activated += new EventHandler(StocktakeNewView_Activated);
+            this.Load += new EventHandler(StocktakeNewView_Load);
+            this.Deactivate += new EventHandler(StocktakeNewView_Deactivate);
 
+            this.Menu = null;
+        }
+
+        void StocktakeNewView_Activated(object sender, EventArgs e)
+        {
             this.SetLanguage();
+        }
+
+        void StocktakeNewView_Load(object sender, EventArgs e)
+        {
+            this.SetLanguage();
+        }
+
+        void StocktakeNewView_Deactivate(object sender, EventArgs e)
+        {
+        }
+
+        public override void BindViewModel(StocktakeNewViewModel viewModel)
+        {
+            base.BindViewModel(viewModel);
+
+            BindingManager.Bind(this).To(viewModel);
+
+            BindingManager.For(this).BindCommand(btnContinue).To(viewModel, _ => _.ContinueCommand);
         }
 
         public override void SetLanguage()

@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace DSW.HT.Utility
+namespace DSW.Core.Utility.Services
 {
     public static class SingleInstanceApplication
     {

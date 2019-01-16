@@ -3,13 +3,12 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using log4net;
-using DSW.HT.Utility;
-using System.Windows.Forms;
-using DSW.HT.Views.Stocktake;
 using DSW.Core.Utility.Services;
+using System.Windows.Forms;
 using DSW.Core.Utility.Forms;
 using DSW.HT;
 using DSW.Core.MVVM;
+using DSW.MVVM.Views.Stocktake;
 
 namespace DSW.Main
 {

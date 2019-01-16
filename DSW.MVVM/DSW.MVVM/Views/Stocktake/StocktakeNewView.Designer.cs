@@ -1,4 +1,4 @@
-﻿namespace DSW.HT.Views.Stocktake
+﻿namespace DSW.MVVM.Views.Stocktake
 {
     partial class StocktakeNewView
     {

@@ -45,9 +45,16 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
     <Reference Include="mscorlib" />
+    <Reference Include="NETStandard.WindowsCE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=961e8a38a128a442, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParties\netstandard.windowsce.1.4.0\net35-cf\NETStandard.WindowsCE.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -67,12 +74,45 @@
     <Compile Include="ViewModels\Stocktake\StocktakeDetailViewModel.cs" />
     <Compile Include="ViewModels\Stocktake\StocktakeItemViewModel.cs" />
     <Compile Include="ViewModels\Stocktake\StocktakeNewViewModel.cs" />
+    <Compile Include="Views\Stocktake\SocktakeDetailView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Stocktake\SocktakeDetailView.Designer.cs">
+      <DependentUpon>SocktakeDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Stocktake\StocktakeItemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Stocktake\StocktakeItemView.Designer.cs">
+      <DependentUpon>StocktakeItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Stocktake\StocktakeNewView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Stocktake\StocktakeNewView.Designer.cs">
+      <DependentUpon>StocktakeNewView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DSW.Core\DSW.Core.csproj">
       <Project>{ADA9B764-BF7A-4FB0-92E6-43E59227AB88}</Project>
       <Name>DSW.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DSW.Localisation\DSW.Localisation.csproj">
+      <Project>{3BB267C0-E1EE-4FAB-B66F-34C3A746D46F}</Project>
+      <Name>DSW.Localisation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Stocktake\SocktakeDetailView.resx">
+      <DependentUpon>SocktakeDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Stocktake\StocktakeItemView.resx">
+      <DependentUpon>StocktakeItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Stocktake\StocktakeNewView.resx">
+      <DependentUpon>StocktakeNewView.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>

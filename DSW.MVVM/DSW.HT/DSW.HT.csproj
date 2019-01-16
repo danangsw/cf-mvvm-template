@@ -74,38 +74,11 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Stocktake\SocktakeDetailView.resx">
-      <DependentUpon>SocktakeDetailView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Stocktake\StocktakeItemView.resx">
-      <DependentUpon>StocktakeItemView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Stocktake\StocktakeNewView.resx">
-      <DependentUpon>StocktakeNewView.cs</DependentUpon>
-    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Setting.cs" />
-    <Compile Include="Views\Stocktake\SocktakeDetailView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Stocktake\SocktakeDetailView.Designer.cs">
-      <DependentUpon>SocktakeDetailView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Stocktake\StocktakeItemView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Stocktake\StocktakeItemView.Designer.cs">
-      <DependentUpon>StocktakeItemView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Stocktake\StocktakeNewView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Stocktake\StocktakeNewView.Designer.cs">
-      <DependentUpon>StocktakeNewView.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config.xml" />

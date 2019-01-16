@@ -79,6 +79,15 @@ namespace DSW.Localisation.Labels {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Loading.
+        /// </summary>
+        public static string HT_LBL_COM001 {
+            get {
+                return ResourceManager.GetString("HT_LBL_COM001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Location.
         /// </summary>
         public static string HT_LBL_STT001 {

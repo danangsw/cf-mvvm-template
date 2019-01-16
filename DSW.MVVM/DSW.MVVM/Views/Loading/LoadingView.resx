@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,24 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="HT_BTN_COM001" xml:space="preserve">
-    <value>Sinkron</value>
-    <comment>button</comment>
-  </data>
-  <data name="HT_BTN_STT001" xml:space="preserve">
-    <value>Lanjut</value>
-    <comment>button</comment>
-  </data>
-  <data name="HT_LBL_COM001" xml:space="preserve">
-    <value>Memuat</value>
-    <comment>label</comment>
-  </data>
-  <data name="HT_LBL_STT001" xml:space="preserve">
-    <value>Pilih Lokasi</value>
-    <comment>label</comment>
-  </data>
-  <data name="HT_LBL_STT002" xml:space="preserve">
-    <value>{0} Item</value>
-    <comment>label</comment>
-  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>134, 17</value>
+  </metadata>
+  <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
+    <value>Pocket_PC</value>
+  </metadata>
+  <metadata name="$this.Skin" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
 </root>

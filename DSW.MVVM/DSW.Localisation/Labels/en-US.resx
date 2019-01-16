@@ -125,6 +125,10 @@
     <value>Continue</value>
     <comment>button</comment>
   </data>
+  <data name="HT_LBL_COM001" xml:space="preserve">
+    <value>Loading</value>
+    <comment>label</comment>
+  </data>
   <data name="HT_LBL_STT001" xml:space="preserve">
     <value>Select Location</value>
     <comment>label</comment>

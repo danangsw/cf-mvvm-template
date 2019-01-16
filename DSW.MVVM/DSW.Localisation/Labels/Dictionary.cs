@@ -9,6 +9,7 @@ namespace DSW.Localisation.Labels
     {
         public static class Common {
             public const string HT_BTN_COM001 = "HT_BTN_COM001";
+            public const string HT_LBL_COM001 = "HT_LBL_COM001";
         }
 
         public static class Stocktake

@@ -74,6 +74,12 @@
     <Compile Include="ViewModels\Stocktake\StocktakeDetailViewModel.cs" />
     <Compile Include="ViewModels\Stocktake\StocktakeItemViewModel.cs" />
     <Compile Include="ViewModels\Stocktake\StocktakeNewViewModel.cs" />
+    <Compile Include="Views\Loading\LoadingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loading\LoadingView.Designer.cs">
+      <DependentUpon>LoadingView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Stocktake\SocktakeDetailView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Views\Loading\LoadingView.resx">
+      <DependentUpon>LoadingView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Stocktake\SocktakeDetailView.resx">
       <DependentUpon>SocktakeDetailView.cs</DependentUpon>
     </EmbeddedResource>

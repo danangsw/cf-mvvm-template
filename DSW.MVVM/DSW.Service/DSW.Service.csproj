@@ -66,6 +66,7 @@
     <Compile Include="ApiClient\ApiClientService.cs" />
     <Compile Include="BusinessModels\InitialSetupModel.cs" />
     <Compile Include="Business\AppSettingService.cs" />
+    <Compile Include="Business\BaseService.cs" />
     <Compile Include="Business\InitialSetupService.cs" />
     <Compile Include="Business\MstItemService.cs" />
     <Compile Include="Business\StocktakeService.cs" />

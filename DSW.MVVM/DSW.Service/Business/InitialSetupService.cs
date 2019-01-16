@@ -14,7 +14,7 @@ namespace DSW.Service.Business
         ResponseResult InitialSetup();
     }
 
-    public class InitialSetupService : IInitialSetupService
+    public class InitialSetupService : BaseService, IInitialSetupService
     {
         private IUnitOfWork _unitOfWork;
         private IApiClientService _apiClientService;
@@ -32,6 +32,23 @@ namespace DSW.Service.Business
 
         public ResponseResult InitialSetup()
         {
+            var response = CallApiInitialSetup();
+            
+            if (response == null)
+            {
+                return ResponseResult.Failed("Calling API is failed.");
+            }
+
+            if (this.InsertMstItemToDB(response.MasterItems))
+            {
+                return ResponseResult.Failed("Insert MstItem to DB is failed.");
+            }
+
+            if (this.InsertAppSettingToDB(response.AppSettingInfo))
+            {
+                return ResponseResult.Failed("Insert AppSetting to DB is failed.");
+            }
+
             return ResponseResult.Succeed();
         }
 
@@ -45,6 +62,8 @@ namespace DSW.Service.Business
             {
                 var response = new InitialSetupApiResponseModel();
 
+                response = _apiClientService.Get<InitialSetupApiResponseModel>(ApiAddress, ApiClientConstant.StocktakeUri.InitialSetup);
+
                 return response;
             }
             catch (Exception ex)
@@ -53,7 +72,7 @@ namespace DSW.Service.Business
             }
         }
 
-        private bool InsertMstItemToDB()
+        private bool InsertMstItemToDB(List<MasterItemApiModel> models)
         {
             try
             {
@@ -65,7 +84,7 @@ namespace DSW.Service.Business
             }
         }
 
-        private bool InsertAppSettingToDB()
+        private bool InsertAppSettingToDB(AppSettingApiModel model)
         {
             try
             {

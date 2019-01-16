@@ -44,6 +44,8 @@ namespace DSW.Main
 
                 FormUtility.EnableTaskBar(false);
 
+                AppDataService.SetSettingApiAddress(Setting.ApiAddress);
+
                 var appModule = new AppModule();
                 var mvvmApplication = new MvvmApplication(appModule);
 

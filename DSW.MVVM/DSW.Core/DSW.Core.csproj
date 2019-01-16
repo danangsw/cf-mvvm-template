@@ -151,6 +151,7 @@
     <Compile Include="Utility\Forms\Capturer.cs" />
     <Compile Include="Utility\Forms\CeHotKeys.cs" />
     <Compile Include="Utility\Forms\DataGridFormatCellEventArgs.cs" />
+    <Compile Include="Utility\Services\AppDataService.cs" />
     <Compile Include="Utility\Services\DateAndTime.cs" />
     <Compile Include="Utility\Services\Device.cs" />
     <Compile Include="Utility\Forms\FormattableDecimalTextBoxColumn.cs">

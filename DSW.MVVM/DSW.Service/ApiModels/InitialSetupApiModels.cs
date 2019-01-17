@@ -6,11 +6,12 @@ using System.Text;
 namespace DSW.Service.ApiModels
 {
     public class InitialSetupApiResponseModel {
-        public AppSettingApiModel AppSettingInfo { get; set; }
+        public List<AppSettingApiModel> AppSettingInfos { get; set; }
         public List<MasterItemApiModel> MasterItems { get; set; }
 
         public InitialSetupApiResponseModel() {
             MasterItems = new List<MasterItemApiModel>();
+            AppSettingInfos = new List<AppSettingApiModel>();
         }
     }
 

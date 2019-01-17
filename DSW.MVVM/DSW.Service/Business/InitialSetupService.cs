@@ -6,6 +6,7 @@ using DSW.Core.Utility.Services;
 using DSW.Database;
 using DSW.Service.ApiClient;
 using DSW.Service.ApiModels;
+using DSW.Database.Entity;
 
 namespace DSW.Service.Business
 {
@@ -16,15 +17,14 @@ namespace DSW.Service.Business
 
     public class InitialSetupService : BaseService, IInitialSetupService
     {
-        private IUnitOfWork _unitOfWork;
         private IApiClientService _apiClientService;
 
         public InitialSetupService(
             IUnitOfWork unitOfWork,
             IApiClientService apiClientService
         )
+            : base(unitOfWork)
         {
-            this._unitOfWork = unitOfWork;
             this._apiClientService = apiClientService;
         }
 
@@ -44,7 +44,7 @@ namespace DSW.Service.Business
                 return ResponseResult.Failed("Insert MstItem to DB is failed.");
             }
 
-            if (this.InsertAppSettingToDB(response.AppSettingInfo))
+            if (this.InsertAppSettingToDB(response.AppSettingInfos))
             {
                 return ResponseResult.Failed("Insert AppSetting to DB is failed.");
             }
@@ -76,22 +76,53 @@ namespace DSW.Service.Business
         {
             try
             {
+                this._unitOfWork.MstItemRepository.DeleteAll();
+                List<MstItem> entities = new List<MstItem>();
+
+                foreach (var item in models)
+                {
+                    var entity = Mappers.Map<MasterItemApiModel, MstItem>(item);
+
+                    entities.Add(entity);
+                }
+
+                var tran = this._unitOfWork.BeginTransaction();
+                this._unitOfWork.MstItemRepository.BulkInsert(entities);
+                this._unitOfWork.EndTransaction();
+                
                 return true;
             }
             catch (Exception ex)
             {
+                this._unitOfWork.Rollback();
                 return false;
             }
         }
 
-        private bool InsertAppSettingToDB(AppSettingApiModel model)
+        private bool InsertAppSettingToDB(List<AppSettingApiModel> models)
         {
             try
             {
+                this._unitOfWork.AppSettingRepository.DeleteAll();
+
+                List<AppSetting> entities = new List<AppSetting>();
+
+                foreach (var item in models)
+                {
+                    var entity = Mappers.Map<AppSettingApiModel, AppSetting>(item);
+
+                    entities.Add(entity);
+                }
+
+                var tran = this._unitOfWork.BeginTransaction();
+                this._unitOfWork.AppSettingRepository.BulkInsert(entities);
+                this._unitOfWork.EndTransaction();
+
                 return true;
             }
             catch (Exception ex)
             {
+                this._unitOfWork.Rollback();
                 return false;
             }
         }

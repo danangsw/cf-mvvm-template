@@ -15,8 +15,7 @@ namespace DSW.HT
         public override void Load()
         {
             Bind<IApiClientService>().To<ApiClientService>();
-            Bind<IAppSettingService>().To<AppSettingService>();
-            Bind<IMstItemService>().To<MstItemService>();
+            Bind<IInitialSetupService>().To<InitialSetupService>();
             Bind<IUnitOfWork>().To<UnitOfWork>().InSingletonScope();
             Bind<StocktakeNewViewModel>().ToSelf();
             Bind<StocktakeItemViewModel>().ToSelf();

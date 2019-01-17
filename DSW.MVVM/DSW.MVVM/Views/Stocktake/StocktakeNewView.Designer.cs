@@ -100,7 +100,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StocktakeNewView";
-            this.Text = "New Stocktake";
+            this.Text = "Sync";
             this.ResumeLayout(false);
 
         }

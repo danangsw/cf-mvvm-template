@@ -80,6 +80,7 @@
     <Compile Include="Views\Loading\LoadingView.Designer.cs">
       <DependentUpon>LoadingView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Loading\LoadingViewUtility.cs" />
     <Compile Include="Views\Stocktake\SocktakeDetailView.cs">
       <SubType>Form</SubType>
     </Compile>

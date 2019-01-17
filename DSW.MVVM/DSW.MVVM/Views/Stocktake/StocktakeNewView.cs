@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using DSW.Core.MVVM;
 using DSW.MVVM.ViewModels.Stocktake;
+using DSW.MVVM.Messages.Stocktake;
+using DSW.MVVM.Views.Loading;
 
 namespace DSW.MVVM.Views.Stocktake
 {
@@ -36,6 +38,42 @@ namespace DSW.MVVM.Views.Stocktake
 
         void StocktakeNewView_Deactivate(object sender, EventArgs e)
         {
+        }
+
+        public override void ViewModel_NotifyViewEventHandler(object sender, NotifyEventArgs args)
+        {
+            switch (args.Tag)
+            {
+                case StocktakeNewMessage.GetLocation:
+                    this.ShowLoading();
+                    break;
+                case StocktakeNewMessage.GetLocationSucceded:
+                    this.CloseLoading();
+                    break;
+                case StocktakeNewMessage.GetLocationFailed:
+                    this.CloseLoading();
+                    break;
+                case StocktakeNewMessage.InitialSetup:
+                    this.ShowLoading();
+                    break;
+                case StocktakeNewMessage.InitialSetupSucceded:
+                    this.CloseLoading();
+                    break;
+                case StocktakeNewMessage.InitialSetupFailed:
+                    this.CloseLoading();
+                    break;
+                case StocktakeNewMessage.Sync:
+                    this.ShowLoading();
+                    break;
+                case StocktakeNewMessage.SyncSucceded:
+                    this.CloseLoading();
+                    break;
+                case StocktakeNewMessage.SyncFailed:
+                    this.CloseLoading();
+                    break;
+                default:
+                    break;
+            }
         }
 
         public override void BindViewModel(StocktakeNewViewModel viewModel)
